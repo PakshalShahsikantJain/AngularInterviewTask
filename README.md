@@ -3,7 +3,7 @@ Instructions For Setup and to run application
 Technology : MEAN Stack
 
 Softwares Required : 
-1.MongoDB(Database)
+1.MongoDB/MySql (Database)
 2.Express(To Create server for Backend)
 3.NodeJS(Backend)
 4.Angular(Frontend(client-side))
@@ -19,7 +19,7 @@ Step 7 : Install Angular ngx-bootstrap using command 'ng add ngx-bootstrap'.
 Step 8 : Run this command 'ng serve --o' in terminal/command prompt to start execution of our project.
 
 Steps to Setup and run Back End application : 
-Step 1 : using npm(Node Package Manager) install libraries like express,mongodb,cors,mongoose and other necessary libraries.
+Step 1 : using npm(Node Package Manager) install libraries like express,mongodb,mysql,cors,mongoose and other necessary libraries.
 Step 2 : Create Folder for Backend and keep my Server.js and all other files and folders in that folder
 Step 3 : Now Navigate into Backend using command 'cd Backend' in terminal/command prompt
 Step 4 : Run this command 'node Server.js' to Start our Backend-Server.
