@@ -27,6 +27,6 @@ Step 4 : Run this command 'node Server.js' to Start our Backend-Server.
 Some imp notes :
 1.Please run Both Front-end and Back-end Application parallely
 2.Ensure that you have installed all required modules and libraries before starting execution of an application 
-3.Application can be run on any 'OS' and Web-browser Just install NodeJS according to your 'OS' from their official website and then by using 'npm' of NodeJS you can install other required as mentioned in above steps
+3.Application can be run on any 'OS' and Web-browser Just install NodeJS according to your 'OS' from their official website and then by using 'npm' of NodeJS you can install other required libraries and technologies as mentioned in above steps
 
 
