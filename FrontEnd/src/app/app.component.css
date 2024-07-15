@@ -1,0 +1,134 @@
+
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+.spacer2 {
+  flex : 0.21 0.21 auto;
+}  
+  .mat-menu-button {
+    display: none; /* Hide the menu button by default */
+  }
+  
+  @media screen and (max-width: 600px) {
+    .mat-menu-button {
+      display: block; /* Display the menu button on smaller screens */
+    }
+  }
+
+  
+  /* Hide content when it's under the toolbar */
+  .main-content {
+    margin-top: 80px;
+    margin-bottom: 80px; /* Adjust based on the height of your toolbar */
+  }
+
+  .no-underline {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the default text color */
+    font-size: small;
+  }
+  
+  .footer-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: rgb(78, 78, 78);
+  }
+  
+  .footer-card {
+    flex-basis: calc(30% - 10px); /* Adjust width as needed, considering margins */
+    border: none;
+    box-shadow: none;
+    max-width: 500px; /* Limiting the max-width of cards */
+    background-color: rgb(78, 78, 78);
+    color: white;
+  }
+
+  .footer-card .mat-card-content p {
+    font-size: large;
+  }
+
+  .icon {
+    display: inline-flex; /* Ensure the icon stays inline */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    border: 1px solid rgb(165, 164, 164); /* Add border around the icon */
+    border-radius: 50%; /* Make the border rounded to create a circle */
+    width: 40px; /* Set the width of the icon */
+    height: 40px; /* Set the height of the icon */
+    margin-bottom: 13%;
+  }
+
+  .social-icons {
+    display: flex; /* Use flexbox to arrange icons horizontally */
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: larger;
+  }
+
+  .icon-link {
+    margin-right: 20px; /* Add margin between icons */
+     /* Icon color */
+    text-decoration: none; /* Remove underline */
+    font-size: x-large;
+
+    display: inline-flex; /* Ensure the icon stays inline */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    border: 1px solid rgb(165, 164, 164);
+    border-radius: 50%;
+    width: 40px; /* Set the width of the icon */
+    height: 40px; /* Set the height of the icon */
+    color: white;
+    margin-bottom: 5%;
+  }
+
+  @media screen and (max-width: 600px) {
+    .footer-toolbar {
+      height: 900px;
+    }
+
+    .footer-card {
+      flex-basis: calc(100%); /* Adjust width for smaller screens */
+      margin-left: -5%;
+    }
+
+    .footer-card .mat-card-content p {
+      font-size: medium;
+    }
+
+    .icon {
+      display: inline-flex; /* Ensure the icon stays inline */
+      align-items: center; /* Center icon vertically */
+      justify-content: center; /* Center icon horizontally */
+      border: 1px solid rgb(165, 164, 164); /* Add border around the icon */
+      border-radius: 50%; /* Make the border rounded to create a circle */
+      width: 30px; /* Set the width of the icon */
+      height: 30px; /* Set the height of the icon */
+      font-size: medium;
+      margin-bottom: 4%;
+    }
+
+    .social-icons {
+      display: flex; /* Use flexbox to arrange icons horizontally */
+      flex-direction: row;
+    }
+    .icon-link {
+      margin-right: 20px; /* Add margin between icons */
+       /* Icon color */
+      text-decoration: none; /* Remove underline */
+      font-size: large;
+  
+      display: inline-flex; /* Ensure the icon stays inline */
+      align-items: center; /* Center icon vertically */
+      justify-content: center; /* Center icon horizontally */
+      border: 1px solid rgb(165, 164, 164);
+      border-radius: 50%;
+      width: 40px; /* Set the width of the icon */
+      height: 40px; /* Set the height of the icon */
+      color: white;
+      margin-bottom: 5%;
+    }
+  }
+  

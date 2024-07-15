@@ -1,0 +1,50 @@
+<div>
+  <mat-toolbar color="primary" style="height: 80px;    position: fixed;top: 0;left: 0;width: 100%;z-index: 1000;">
+  <!-- weather.component.html -->
+    <span class="spacer2"></span>
+    <span>OnlineWEB STORE</span>
+    <span class="spacer"></span>
+    <button *ngIf="isCollapsed" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <ng-container *ngIf="!isCollapsed">
+      <button mat-button routerLink="/home">HOME</button>
+      <a style="text-decoration: none;color: white;" routerLink="/buy">
+        <mat-icon matBadge={{cartCount}} matBadgeColor="accent">shopping_cart</mat-icon>
+      </a>
+      <button mat-icon-button color="primary" style="text-decoration: none;color: white;margin-left: 2%;margin-top: -1%;" [matMenuTriggerFor]="menu2">
+        <mat-icon style="font-size: xx-large;">account_circle</mat-icon>
+      </button>
+    </ng-container>
+    <span class="spacer2"></span>
+  </mat-toolbar>
+
+  <mat-menu #menu2="matMenu">
+    <button *ngIf="!isLoggedIn()" mat-menu-item (click)="LogIn()">
+      Log In
+    </button>
+    <button *ngIf="isLoggedIn()" mat-menu-item (click)="LogOut()">
+      Log Out
+    </button>
+  </mat-menu>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/home">HOME</button>
+    <button mat-menu-item routerLink="/buy">
+      VIEW CART
+      <mat-icon matBadge={{cartCount}} matBadgeColor="accent">shopping_cart</mat-icon>
+    </button>
+    <button *ngIf="!isLoggedIn()" mat-menu-item (click)="LogIn()">
+      LOG IN
+    </button>
+    <button *ngIf="isLoggedIn()" mat-menu-item (click)="LogOut()">
+      LOG OUT
+    </button>
+  </mat-menu>
+</div>
+
+<div class="main-content">
+  <app-loading *ngIf="loadingService.loading$ | async"></app-loading>
+  <app-weather></app-weather>
+  <router-outlet></router-outlet>
+</div>

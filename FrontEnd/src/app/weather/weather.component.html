@@ -1,0 +1,7 @@
+<!-- weather.component.html -->
+<div *ngIf="weatherData">
+    <h2>Weather Forecast</h2>
+    <p>Temperature: {{ weatherData.data.timelines[0].intervals[0].values.temperature }} °C</p>
+    <p>Weather Description: {{ weatherData.data.timelines[0].intervals[0].values.weatherCode }}</p>
+</div>
+  

@@ -1,0 +1,51 @@
+.spacer2 {
+    flex : 0.087 0.087 auto;
+  } 
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap:20px; /* Gap between cards */
+  
+    /* Adjust layout for smaller screens */
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr; /* Change to single column layout */
+    }
+  }
+
+  .card {
+    box-shadow: none;
+    border: none;
+  }
+  .card img {
+    height: 400px;
+    width: 100%;
+  }
+
+  .card h2 {
+    font-family: monospace;
+  }
+  .card1 {
+    flex: 1 1 100%; /* Flex-grow, flex-shrink, flex-basis */
+    justify-content: center;
+  }   
+
+  /* Card 2 takes 600px width */
+  .card2 {
+    flex: 1 1 700px; /* Flex-grow, flex-shrink, flex-basis */
+    width: 700px; /* Set a max-width to ensure it doesn't exceed 600px */
+  }
+  
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 1270px) {
+ 
+    .card {
+      width: 100%; /* Stack cards vertically for smaller screens */
+    } 
+
+    .card img {
+        max-width: 300px;
+    }
+  }
+  

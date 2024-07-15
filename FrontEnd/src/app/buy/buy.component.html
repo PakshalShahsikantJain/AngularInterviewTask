@@ -1,0 +1,48 @@
+<div class="container">
+    <mat-card class="card">
+        <mat-card-header style="justify-content: center;">
+          <mat-card-title *ngIf="cartItem.length === 0">
+            <h1 style="font-family: monospace;">Your Cart is Empty!!!!</h1>
+            <button mat-raised-button style="width: 100%;" routerLink="/home" color="accent">Continue With Shopping</button>
+          </mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content class="Display">
+          <table *ngIf="cartItem.length > 0" class="table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let i of cartItem,index as value">
+              <tr>
+                <td>
+                  <a>{{i.title}}</a>
+                </td>
+                <td>
+                  <a>{{i.description}}</a>
+                </td>
+                <td>
+                  <a>{{i.price | currency:'INR'}}</a>
+                </td>
+                <td>
+                  <button (click)="Delete(i._id)" style="background-color: white;border: none;">
+                    <mat-icon>delete_outline</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>     
+          <div *ngIf="cartItem.length > 0">
+            <div style="font-size: larger;">Total: {{ subtotal | currency:'INR'}}</div>
+            <div class="example-button">
+              <button mat-raised-button color="accent" routerLink="/home" >Shop More</button>
+              <button mat-raised-button color="primary" (click)="PlaceOrder()" style="margin-left: 2%;">Place Order</button>
+            </div>
+          </div> 
+        </mat-card-content>
+    </mat-card>
+</div>

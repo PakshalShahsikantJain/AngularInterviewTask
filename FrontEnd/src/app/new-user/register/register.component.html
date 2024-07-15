@@ -1,0 +1,36 @@
+<div class="container">
+    <mat-card class="example-card card">
+      <mat-icon class="icon">account_circle</mat-icon>
+      <mat-card-title>Sign Up</mat-card-title>
+      <form [formGroup]="userForm">  
+        <mat-form-field  appearance="fill">
+          <mat-label>User Name</mat-label>
+          <input matInput formControlName="username" type="text" placeholder="ex : ABC123">
+          <mat-error *ngIf="userForm.get('username')!.errors?.['custom'] && !userForm.get('username')!.errors?.['required']">
+              Please enter a valid <strong>User Name</strong>
+          </mat-error>
+  
+          <mat-error *ngIf="userForm.get('username')!.errors?.['required']">
+              User name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field  appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="togglePasswordVisibility()">
+            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+          <mat-error *ngIf="userForm.get('password')!.errors?.['required']">
+            Password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <button  class="button2" mat-raised-button (click)="Save()" color="accent" [disabled]="!userForm.valid">
+          Register
+        </button>
+        <button  class="button" mat-raised-button color="primary" routerLink="/login">
+          Back To Login Page
+        </button>
+      </form>
+    </mat-card>
+  </div>

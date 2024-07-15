@@ -1,0 +1,23 @@
+.example-card {
+    max-width: 400px;
+  }
+
+  .container {
+    margin-top: 20%;
+    margin-bottom: 15%;
+  }
+
+  .Display {
+    font-family: monospace;font-size: larger;
+  }
+
+  .example-button {
+    display: flex;
+    margin-top: 1%;
+  }
+
+  @media screen and (max-width : 600px) {
+    .Display {
+      font-size: medium;
+    }    
+  }

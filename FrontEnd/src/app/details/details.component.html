@@ -1,0 +1,32 @@
+<div style="margin-top: 15%;margin-bottom: 10%;" class="container">
+    <div *ngFor="let i of items" class="card-container">
+        <mat-card *ngIf="i.title === Title" class="card card1">
+            <mat-card-content>
+                <img mat-image [src]="i.image" alt="image">
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card *ngIf="i.title === Title" class="card card2">
+          <mat-card-header>
+              <mat-card-title>
+                <h1 style="font-family: monospace;font-size:xx-large;margin-left: -3%;">
+                  {{i.title}}
+                </h1>
+              </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-divider></mat-divider>
+            <h2>
+                Description : <h3 style="display: inline-block;">{{i.description}}</h3>
+            </h2>
+            <mat-divider></mat-divider>
+            <h2>
+                Price : 
+                <h3 style="display: inline-block;">{{i.price | currency:'INR'}}</h3>
+            </h2>
+            <button mat-raised-button style="margin-right: 10px;" (click)="Add(i._id)" routerLink="/buy" color="primary">Add to Cart</button>
+            <button mat-raised-button style="margin-right: 10px;" routerLink="/buy" color="accent">Checkout Cart</button>
+          </mat-card-content>
+        </mat-card>
+    </div>      
+</div>   

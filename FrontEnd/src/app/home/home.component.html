@@ -1,0 +1,27 @@
+<br>
+<br>
+<div>
+  <div class="text">
+    <h1>
+      PRODUCTS
+    </h1>
+  </div>
+  <div class="divider-container">
+    <mat-divider class="custom-divider"></mat-divider>
+  </div>
+  <div class="cardDisplay container"> 
+    <mat-card *ngFor="let item of items" class="example-card">
+      <img mat-card-image [src]="item.image" alt="Image">
+      <mat-card-content style="font-size: x-large;margin-left: 1%;font-family: monospace;color: blue;">
+        <p>{{ item.title }}</p>
+      </mat-card-content>
+      <mat-card-actions style="margin-bottom: auto;margin-left: 1%;">
+        <button [routerLink]="['/details', item.title]" mat-raised-button color="primary">View Details</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
